@@ -31,7 +31,8 @@
     "react-responsive-pagination": "^2.10.1",
     "react-select": "^5.10.0",
     "react-square-web-payments-sdk": "^3.2.1",
-    "swiper": "^11.2.1"
+    "swiper": "^11.2.1",
+    "vercel": "^41.1.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -44,7 +44,7 @@ const paymentMethods = [
 const PublishNews = () => {
   const [isVisitHotel, setIsVisitHotel] = useState(false);
   const { register, handleSubmit, setValue, formState: { errors }, getValues, watch, reset, control } = useForm();
-  console.log("errors", errors)
+  // console.log("errors", errors)
   const { request, response, loading } = useRequest(true);
   const { request: request_create } = useRequest(true);
   const stripePromise = loadStripe('pk_live_51IhBByD3gzWFhFEcvzKD2S1fOTTiF2CjXgikLRqGH0yQvHR5QFQthkT5zoUe069NFb881KGo1Oj0C0G4xhdPf7dO00ilSXPHBD');
@@ -61,7 +61,7 @@ const PublishNews = () => {
   const [showModal, setShowModal] = useState(false);
 
   const onSubmit = (data) => {
-    console.log("data",data);
+    // console.log("data",data);
     const payload = {
       amount: amount,          // Keep the static amount or make it dynamic
       months: 6,               // If months is static (like 6 months), set it here
@@ -107,7 +107,7 @@ const PublishNews = () => {
     formdata.append("offer_description", getValues().offer_description ?? "")
     formdata.append("offer_from", getValues().offer_from)
     formdata.append("offer_to", getValues().offer_to)
-    formdata.append("hotel_id", hotel_details._id)
+    formdata.append("hotel_id", hotel_details?._id)
     formdata.append("show_on_home", paidExclusiveOffer )
 
     // paymaent_status,contactNo,active 
