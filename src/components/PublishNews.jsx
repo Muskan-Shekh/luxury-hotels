@@ -73,7 +73,7 @@ const PublishNews = () => {
 
   useEffect(() => {
     if (response) {
-      console.log(response, "response");
+      // console.log(response, "response");
       steRes_data(response)
       setShowModal(true);
     }
@@ -128,12 +128,12 @@ const PublishNews = () => {
   const [preview1, setPreview1] = useState(null);
 
   const handleImageChange1 = (event) => {
-    console.log("event", event)
+    // console.log("event", event)
     const file = event.target.files[0];
 
     if (file) {
       const validTypes = ["image/jpeg", "image/jpg", "image/png"];
-      console.log("validTypes", validTypes)
+      // console.log("validTypes", validTypes)
       if (!validTypes.includes(file.type)) {
         toast.error("Only JPG, JPEG, and PNG files are allowed.");
         setPreview1(null);
@@ -147,12 +147,12 @@ const PublishNews = () => {
   };
 
   const handleImageChange = (event) => {
-    console.log("event", event)
+    // console.log("event", event)
     const file = event.target.files[0];
 
     if (file) {
       const validTypes = ["image/jpeg", "image/jpg", "image/png"];
-      console.log("validTypes", validTypes)
+      // console.log("validTypes", validTypes)
       if (!validTypes.includes(file.type)) {
         toast.error("Only JPG, JPEG, and PNG files are allowed.");
         setPreview(null);
@@ -164,7 +164,7 @@ const PublishNews = () => {
       setPreview(URL.createObjectURL(file));
     }
   };
-  console.log("preview", preview);
+  // console.log("preview", preview);
 
   const handleRemoveImage = () => {
     setPreview(null);
@@ -190,7 +190,7 @@ const PublishNews = () => {
   );
 
   const handleSelectCountry = (country) => {
-    console.log("country",country)
+    // console.log("country",country)
     setValue("country", country?._id); 
     setSelectedCountry(country?.country); 
     setCountrySearch(""); 
